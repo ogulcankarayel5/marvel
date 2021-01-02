@@ -1,43 +1,35 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Provider } from 'react-redux';
 import {
   BrowserRouter as Router,
 
   Route, Switch
 } from "react-router-dom";
-import { getCharacters } from './services/marvel-service';
+import Home from './Home';
+import { store } from './store/root';
 import './styles/main.scss';
 
 
 
 
-export class Home extends Component {
 
 
 
-  async componentDidMount(){
-    const response = await getCharacters();
-    console.log(response)
-  }
-  render() {
-    const { REACT_APP_PUBLİC_KEY } = process.env;
-    console.log(REACT_APP_PUBLİC_KEY)
-    return (
-      <div>
-        <p>example</p>
-      </div>
-    )
-  }
-}
-
-
-function App() {
+export function App() {
   return (
-   <Router>
+ <Provider store={store}>
+     <Router>
      <Switch>
        <Route exact to="/" component={Home}/>
      </Switch>
    </Router>
+ </Provider>
   );
 }
 
-export default App;
+
+
+
+
+
+
