@@ -1,0 +1,36 @@
+@mixin padding($top:auto,$bottom:auto,$left:auto,$right:auto,$allSides:null){
+  @if($allSlides!=null){
+    padding:$allSides;
+  }
+  @else{
+    padding-top:$top;
+    padding-bottom:$bottom;
+    padding-left:$left;
+    padding-right:$right;
+
+  }
+}
+
+
+
+@mixin tablet{
+  @media (min-width:#{$tablet}){
+    @content;
+  }
+}
+
+@mixin desktop{
+  @media (min-width:#{$desktop}){
+    @content;
+  }
+}
+
+@mixin lg-desktop{
+  @media (min-width:#{$lg-desktop}){
+    @content;
+  }
+}
+
+
+
+

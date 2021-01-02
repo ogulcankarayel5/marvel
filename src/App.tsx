@@ -1,25 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import {
+  BrowserRouter as Router,
+
+  Route, Switch
+} from "react-router-dom";
+import { getCharacters } from './services/marvel-service';
+import './styles/main.scss';
+
+
+
+
+export class Home extends Component {
+
+
+
+  async componentDidMount(){
+    const response = await getCharacters();
+    console.log(response)
+  }
+  render() {
+    const { REACT_APP_PUBLİC_KEY } = process.env;
+    console.log(REACT_APP_PUBLİC_KEY)
+    return (
+      <div>
+        <p>example</p>
+      </div>
+    )
+  }
+}
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <Router>
+     <Switch>
+       <Route exact to="/" component={Home}/>
+     </Switch>
+   </Router>
   );
 }
 
