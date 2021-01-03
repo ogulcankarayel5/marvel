@@ -1,7 +1,12 @@
+
 @function weight($weight-name){
     @return map-get($font-weights,$weight-name);
 }
 
 @function space($space-name){
     @return map-get($spacing,$space-name);
+}
+
+@function radius($radi-name){
+    @return map-get($radii,$radii-name)
 }

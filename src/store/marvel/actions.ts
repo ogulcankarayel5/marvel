@@ -24,7 +24,7 @@ export const getCharactersFailure = () :MarvelActionTypes => {
 
 
 
-export const getCharacters = (params: string) => async (
+export const getCharacters = (params?: string) => async (
   dispatch: Dispatch<MarvelActionTypes>
 ) => {
     try{
@@ -33,6 +33,7 @@ export const getCharacters = (params: string) => async (
 
         console.log(response.data)
         dispatch(getCharactersSuccess(response.data));
+        
     }   
     catch(err){
         console.log(err)

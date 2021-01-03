@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { App } from './App';
+import './main.scss';
 import reportWebVitals from './reportWebVitals';
 dotenv.config();
 

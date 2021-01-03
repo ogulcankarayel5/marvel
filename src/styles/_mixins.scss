@@ -1,5 +1,5 @@
 @mixin padding($top:auto,$bottom:auto,$left:auto,$right:auto,$allSides:null){
-  @if($allSlides!=null){
+  @if($allSides!=null){
     padding:$allSides;
   }
   @else{

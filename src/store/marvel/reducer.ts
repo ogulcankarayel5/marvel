@@ -3,7 +3,7 @@ import { MarvelActionTypes, MarvelState } from "./types";
 
 
 const initialState: MarvelState = {
-  results: [],
+  data: {},
   loading: false,
 };
 
@@ -18,7 +18,7 @@ export function marvelReducer (state = initialState,action:MarvelActionTypes):Ma
             return{
                 ...state,
                 loading:false,
-                results:action.payload.results
+                data:action.payload
             }
         default:
             return state

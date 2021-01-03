@@ -1,7 +1,7 @@
 import { GET_CHARACTERS_FAILURE, GET_CHARACTERS_REQUEST, GET_CHARACTERS_SUCCESS } from "./constants";
 
 export interface MarvelState {
-  readonly results: any;
+  readonly data: any;
   readonly loading: boolean;
 }
 
