@@ -1,0 +1,51 @@
+.detail{
+   &__up{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+    
+    &__title{
+        font-size: 4rem;
+    }
+  &__body{
+      display: flex;
+      justify-content: center;
+      
+     
+  }
+
+  &__text{
+      display:flex;
+      flex-direction: column;
+      justify-content:center;
+      & > h2{
+          font-size: 3rem;
+      }
+      & > p{
+          font-size: 1.5rem;
+      }
+  }
+
+  &__image{
+    
+    height:40rem;
+    & > img{
+        height: 100%;
+        object-fit: cover;
+    }
+     
+  }
+
+  &__comics{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,25rem));
+   justify-content: center;
+    gap: 1.5rem;
+  }
+
+ 
+
+ 
+}

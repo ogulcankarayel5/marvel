@@ -17,6 +17,10 @@
   }
 
   &__overlay {
+    display:flex;
+    flex-direction: column;
+    
+    align-items: center;
     position: absolute;
     top: 0;
     bottom: 0;

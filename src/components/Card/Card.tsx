@@ -35,10 +35,10 @@ export const CardTitle = ({name}:any) => {
     )
 }
 
-export const CardButton = () => {
+export const CardButton = (click:any) => {
     return (
-        <div onClick={()=>alert("hey")} className="card__button">
+        <button onClick={click} className="card__button">
             More...
-        </div>
+        </button>
     )
 }

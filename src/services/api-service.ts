@@ -24,7 +24,7 @@ const genericAxios = async <T = any>(parameters: IAxiosParameters): Promise<T> =
       url: `${endpoint}?${apiKey}&${params?params:''}`,
       
     };
-    console.log(config.url)
+    
 
     axiosInstance(config)
       .then((response: AxiosResponse<T>) => {
