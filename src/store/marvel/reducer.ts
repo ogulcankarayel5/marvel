@@ -26,6 +26,7 @@ export function marvelReducer (state = initialState,action:MarvelActionTypes):Ma
         return {
           ...state,
           character: action.payload,
+          loading:false
         };
       case GET_COMICS_SUCCESS:
         return {

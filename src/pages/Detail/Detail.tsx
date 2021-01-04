@@ -17,11 +17,13 @@ export class Detail extends Component<Props & RouteComponentProps<any>, any> {
     this.props.getCharacterById(this.props.match.params.id);
     this.props.getComicById(this.props.match.params.id);
   }
-  render() {
-    const { data, comic } = this.props;
-    
 
-    return data ? (
+  render() {
+    const { data, comic, loading } = this.props;
+
+    return loading ? (
+      <p>loading</p>
+    ) : (
       data.map((item: any, index: number) => (
         <div className="detail" key={index} data-testid="detail">
           <div className="detail__up">
@@ -56,8 +58,6 @@ export class Detail extends Component<Props & RouteComponentProps<any>, any> {
           </div>
         </div>
       ))
-    ) : (
-      <p>loading</p>
     );
   }
 }
@@ -74,7 +74,6 @@ interface DispatchProps {
 }
 
 const mapStateToProps = (state: AppState, ownProps: any): StateProps => {
-  
   return {
     loading: state.marvel.loading,
     data: getCharacterSelector(state),
