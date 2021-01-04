@@ -49,7 +49,7 @@ export const getCharacters = (params?: string) => async (
         dispatch(getCharactersRequest())
         const response = await getCharactersService(`limit=30&${params}`);
 
-     
+      console.log(response.data)
         dispatch(getCharactersSuccess(response.data.results));
         
     }   

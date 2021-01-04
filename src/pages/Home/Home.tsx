@@ -12,7 +12,7 @@ type Props = StateProps & DispatchProps;
 export class Home extends Component<Props&RouteComponentProps<any>, any> {
 
   state = {
-    page:1,
+    page:0,
     loading:false
   }
 

@@ -23,7 +23,7 @@ export class Detail extends Component<Props & RouteComponentProps<any>, any> {
 
     return data ? (
       data.map((item: any, index: number) => (
-        <div className="detail" key={index}>
+        <div className="detail" key={index} data-testid="detail">
           <div className="detail__up">
             <h2 className="detail__title">{item.name}</h2>
             <div className="detail__body">

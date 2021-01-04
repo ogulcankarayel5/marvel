@@ -16,13 +16,13 @@ export default Card
 export const CardImage = ({path}:any) => {
    
     return (
-        <img className="card__img" src={`${path}/detail.jpg`} alt="Marvel"/>
+        <img data-testid="image" className="card__img" src={`${path}/detail.jpg`} alt="Marvel"/>
     )
 }
 
 export const CardOverlay = ({children}:any) => {
     return (
-        <div className="card__overlay">
+        <div data-testid="overlay" className="card__overlay">
             {children}
         </div>
     )
